@@ -258,6 +258,63 @@
       box-shadow: var(--shadow-sm);
     }
 
+    /* ---------- Live actions (Slido / Zoom) ---------- */
+    .live-actions {
+      margin-top: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .live-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 0.76rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #b9e4c4;
+    }
+
+    .live-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #33d17a;
+      box-shadow: 0 0 0 0 rgba(51, 209, 122, 0.6);
+      animation: live-pulse 1.8s infinite;
+    }
+
+    @keyframes live-pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(51, 209, 122, 0.55);
+      }
+
+      70% {
+        box-shadow: 0 0 0 8px rgba(51, 209, 122, 0);
+      }
+
+      100% {
+        box-shadow: 0 0 0 0 rgba(51, 209, 122, 0);
+      }
+    }
+
+    .btn-live {
+      color: #fff;
+      background: linear-gradient(135deg, #33d17a, #21a5e0);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 8px 18px;
+      font-size: 0.86rem;
+      box-shadow: 0 4px 14px rgba(33, 165, 224, 0.35);
+    }
+
+    .btn-live:hover {
+      box-shadow: 0 6px 18px rgba(33, 165, 224, 0.5);
+    }
+
     /* ---------- Sections ---------- */
     section.block {
       padding: 76px 0;
@@ -600,6 +657,11 @@
         <a href="#call" class="btn btn-solid">Call for Papers</a>
         <a href="#schedule" class="btn btn-ghost">Schedule</a>
         <a href="#speakers" class="btn btn-ghost">Speakers</a>
+      </div>
+      <div class="live-actions">
+        <span class="live-tag"><span class="live-dot"></span>Join Live</span>
+        <a href="https://us06web.zoom.us/j/89339484329?pwd=fYJhQ0Bd3bJhACrpde98EYXt2IjQPu.1" class="btn btn-live" target="_blank" rel="noopener">Zoom</a>
+        <a href="https://app.sli.do/event/cySDrnCV2GVszjyGmi2aoK" class="btn btn-live" target="_blank" rel="noopener">Slido Q&amp;A</a>
       </div>
     </div>
   </header>
